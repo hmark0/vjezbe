@@ -9,13 +9,12 @@ public static void main(String[] args){
 	int stup = Integer.parseInt(JOptionPane.showInputDialog("Unesite broj stupaca"));
 	int [][] matrica = new int [red][stup];
 	int a=1;
-	int maxs = 0;
-	int setacr = 1;
+	int setacr = 0;
 	int setacs = 0;
 	while(a<(red*stup)){
 		
 	for(int i=1;i<red;i++){
-		matrica [i][setacs] = a++; setacr++;
+		matrica [i][setacr] = a++; setacr++;
 	if(i>=red){
 		break;
 	}
@@ -31,6 +30,19 @@ public static void main(String[] args){
 		if(k<=red){
 			break;
 		}                                                                                                                                                                                                                                                                                                                                                                                                
+	}
+	for(int m=0;m<stup-1;m++){
+		matrica[setacr][setacs] = a++; setacs++;
+		if(m>=stup-1){
+			break;
+			}
+	for(int n=0;n<red-1;n++){
+		matrica[setacr][setacs]= a++;setacr++;
+		if(n<=red-1){
+			break;
+		}
+	}
+		}
 	}
 	for(int l = setacs;l<stup-1;l++){
 		matrica[red][setacs]= a++;setacs++;
