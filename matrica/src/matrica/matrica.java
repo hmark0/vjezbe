@@ -26,7 +26,7 @@ public static void main(String[] args){
 		}
 	}
 	for(int k=0;k>red;k++){
-		matrica[setacr][stup]= a++;setacr++;
+		matrica[setacr][setacs]= a++;setacr++;
 		if(k<=red){
 			break;
 		}                                                                                                                                                                                                                                                                                                                                                                                                
@@ -43,23 +43,24 @@ public static void main(String[] args){
 		}
 	}
 		}
-	}
-	for(int l = setacs;l<stup-1;l++){
-		matrica[red][setacs]= a++;setacs++;
+	
+	for(int l = 0;l<stup-1;l++){
+		matrica[setacr][setacs]= a++;setacs++;
 		if(l>=stup){
 			break;
 		}
 		for(int m=0;m<red-1;m++){
-			matrica[setacr][stup] = a++;setacr++;
+			matrica[setacr][setacs] = a++;setacr++;
 			if(m>=red){
 				break;
 			}
 		}
 		
 	}
-}
-	for(int i=0;i<red;i++) {
-		for(int j=0;j<stup;j++) {
+	}
+
+	for(int i=0;i<setacr;i++) {
+		for(int j=0;j<setacs;j++) {
 			System.out.print(matrica[i][j]+ "	");
 			
 		}
