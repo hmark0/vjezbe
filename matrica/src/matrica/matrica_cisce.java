@@ -12,31 +12,39 @@ public static void main(String[] args) {
 	int setacs = 0;
 	int max = red-1;
 	int min = stup-1;
-	while(a<(red*stup)){
+	while(a<=(red*stup)){
 		for(int i=1;i<red;i++){
-			matrica[i][setacs] = a++; setacr++;
-			if(i<=red){
+			matrica[i][setacs] = a++;
+			if(i>=red){
 				break;
 			}
 		}
-		for(int i=setacr;i<stup+setacr;i++){
+		for(int i=setacs;i<stup;i++){
 		
-			matrica[setacr][i] = a++;setacs++;
-			if(i>=stup+setacr){
+			matrica[setacr][i] = a++;
+			if(i>=stup){
 				break;
 			}
 		}
-		for(int i=setacr;i<(red - 1)+ setacr;i++){
-			matrica[i][setacs] = a++;setacr++;
-			if(i>=red+setacs){
+		for(int i=setacr;i<max ;i++){
+			matrica[i][setacs] = a++;
+			if(i>=max){
 				break;
 			}
+			for(int j =setacs;j<min;j++){
+				matrica[setacr][j] = a++;
+			}
 		}
+		setacr++;
+		setacs++;
+		max--;
+		min--;
 	}
-	for(int i = 0;i<setacr;i++){
-		for(int j =0;j<setacs;j++){
+	for(int i = 0;i<red;i++){
+		for(int j =0;j<stup;j++){
 			System.out.println(matrica[i][j] + " ");
 		}
 	}
+	
 }
 }
